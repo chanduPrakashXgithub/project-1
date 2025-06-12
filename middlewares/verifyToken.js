@@ -4,7 +4,8 @@ const dotEnv = require('dotenv');
 
 dotEnv.config()
 
-const secretKey = process.env.WhatIsYourName
+const secretKey = process.env.SECRET_KEY || 'MyDefaultLocalSecret';
+
 
 
 const verifyToken = async(req, res, next) => {
